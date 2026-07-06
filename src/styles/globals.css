@@ -87,21 +87,13 @@ textarea {
 .brand {
   align-items: center;
   display: inline-flex;
-  gap: 10px;
   min-width: 0;
 }
 
-.brand img {
-  border: 1px solid rgba(244, 236, 220, 0.5);
-  border-radius: 50%;
+.brand-logo {
   flex: 0 0 auto;
-}
-
-.brand span {
-  font-size: clamp(0.88rem, 2.8vw, 1rem);
-  font-weight: 700;
-  line-height: 1.15;
-  max-width: 260px;
+  height: auto;
+  width: clamp(154px, 24vw, 220px);
 }
 
 .site-nav {

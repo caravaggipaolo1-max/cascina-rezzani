@@ -40,7 +40,7 @@ public/images/cascina/cascina-placeholder.jpg
 public/images/products/creme-de-cassis-placeholder.jpg
 public/images/products/birra-ribes-placeholder.jpg
 public/images/products/spumante-brut-placeholder.jpg
-public/images/logos/logo-placeholder.png
+public/images/logos/cascina-rezzani-logo.png
 ```
 
 Quando arrivano le foto definitive, basta sostituire i file mantenendo lo stesso nome. In alternativa, aggiornare i percorsi in `src/data/products.ts` o nei componenti interessati.

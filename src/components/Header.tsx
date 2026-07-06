@@ -10,13 +10,13 @@ export function Header({ compact = false }: HeaderProps) {
     <header className={compact ? "site-header compact" : "site-header"}>
       <Link className="brand" href="/" aria-label="Torna alla home">
         <Image
-          src="/images/logos/logo-placeholder.png"
-          width={42}
-          height={42}
+          className="brand-logo"
+          src="/images/logos/cascina-rezzani-logo.png"
+          width={972}
+          height={264}
           alt=""
           priority
         />
-        <span>Società Agricola Cascina Rezzani</span>
       </Link>
       <nav className="site-nav" aria-label="Navigazione principale">
         <a href="/#storia">La nostra storia</a>
