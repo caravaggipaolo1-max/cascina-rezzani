@@ -45,13 +45,20 @@ public/images/logos/cascina-rezzani-logo.png
 
 Quando arrivano le foto definitive, basta sostituire i file mantenendo lo stesso nome. In alternativa, aggiornare i percorsi in `src/data/products.ts` o nei componenti interessati.
 
-## Contatti
+## Dati societari e contatti
 
-I placeholder di indirizzo, telefono, email e WhatsApp sono in:
+I dati societari pubblicati nel footer e nella sezione contatti sono in:
 
 ```text
 src/components/ContactSection.tsx
 src/components/Footer.tsx
+```
+
+Privacy Policy e Cookie Policy sono in:
+
+```text
+src/app/privacy-policy/page.tsx
+src/app/cookie-policy/page.tsx
 ```
 
 Il form e solo front-end. In futuro puo essere collegato a Formspree, EmailJS, una API route Next.js o un altro servizio di invio.

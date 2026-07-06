@@ -3,11 +3,11 @@
 import { FormEvent, useEffect, useState } from "react";
 import { products } from "@/data/products";
 
-const COMPANY_NAME = "Società Agricola Cascina Rezzani";
-const ADDRESS = "Inserire indirizzo";
-const PHONE = "Inserire telefono";
-const EMAIL = "Inserire email";
-const WHATSAPP = "Inserire numero WhatsApp";
+const COMPANY_NAME = "Cascina Rezzani S.R.L. - Società Agricola";
+const ADDRESS = "Via Montorfano, 3 - 25033 Cologne (BS)";
+const PEC = "cascinarezzani@lamiapec.it";
+const PHONE = "";
+const WHATSAPP = "";
 
 export function ContactSection() {
   const [selectedProduct, setSelectedProduct] = useState("Crème de Cassis");
@@ -43,13 +43,15 @@ export function ContactSection() {
           <address>
             <strong>{COMPANY_NAME}</strong>
             <span>{ADDRESS}</span>
-            <a href="tel:+390000000000">{PHONE}</a>
-            <a href="mailto:info@example.com">{EMAIL}</a>
+            {PHONE ? <a href={`tel:${PHONE}`}>{PHONE}</a> : null}
+            <a href={`mailto:${PEC}`}>PEC: {PEC}</a>
           </address>
-          <a className="button whatsapp" href="#contatti">
-            WhatsApp
-            <span>{WHATSAPP}</span>
-          </a>
+          {WHATSAPP ? (
+            <a className="button whatsapp" href={`https://wa.me/${WHATSAPP}`}>
+              WhatsApp
+              <span>{WHATSAPP}</span>
+            </a>
+          ) : null}
         </div>
         <form className={highlight ? "contact-form highlighted" : "contact-form"} onSubmit={submitForm}>
           <label>

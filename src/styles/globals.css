@@ -2,6 +2,7 @@
   --green-950: #10281f;
   --green-900: #173d2f;
   --green-800: #23523f;
+  --pistachio-300: #c9d99a;
   --cream-100: #fbf7ed;
   --cream-200: #f4ecdc;
   --wood-700: #6f4a2f;
@@ -65,9 +66,10 @@ textarea {
 
 .site-header {
   align-items: center;
-  background: rgba(16, 40, 31, 0.66);
-  border-bottom: 1px solid rgba(244, 236, 220, 0.2);
-  color: var(--cream-100);
+  background: rgba(201, 217, 154, 0.92);
+  border-bottom: 1px solid rgba(16, 40, 31, 0.16);
+  box-shadow: 0 10px 30px rgba(16, 40, 31, 0.1);
+  color: var(--green-950);
   display: flex;
   gap: 16px;
   justify-content: space-between;
@@ -81,7 +83,7 @@ textarea {
 }
 
 .site-header.compact {
-  background: var(--green-950);
+  background: var(--pistachio-300);
 }
 
 .brand {
@@ -93,7 +95,7 @@ textarea {
 .brand-logo {
   flex: 0 0 auto;
   height: auto;
-  width: clamp(154px, 24vw, 220px);
+  width: clamp(174px, 26vw, 252px);
 }
 
 .site-nav {
@@ -111,7 +113,7 @@ textarea {
 
 .site-nav a:hover,
 .site-nav a:focus-visible {
-  border-color: var(--gold-500);
+  border-color: var(--cassis-700);
 }
 
 .hero {
