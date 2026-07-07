@@ -36,14 +36,6 @@ export function ProductCard({ product }: ProductCardProps) {
             <dt>Formati</dt>
             <dd>{product.formats.join(" / ")}</dd>
           </div>
-          <div>
-            <dt>Prezzo</dt>
-            <dd>{product.retailPrice}</dd>
-          </div>
-          <div>
-            <dt>Disponibilità</dt>
-            <dd>{product.availability}</dd>
-          </div>
         </dl>
         <div className="product-actions">
           <Link className="text-button" href={`/prodotti/${product.slug}`}>
