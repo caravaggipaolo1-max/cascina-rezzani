@@ -35,14 +35,25 @@ export const products: Product[] = [
     callToAction: "Richiedi informazioni"
   },
   {
-    name: "Spumante Brut",
-    slug: "spumante-brut",
-    category: "Spumante Brut",
+    name: "Franciacorta Brut",
+    slug: "franciacorta-brut",
+    category: "Franciacorta Brut",
     description:
-      "Uno spumante brut elegante e asciutto, ideale per aperitivi, degustazioni e momenti conviviali.",
+      "Un Franciacorta Brut elegante e asciutto, pensato per accompagnare aperitivi, degustazioni e momenti conviviali con una bollicina fine e armoniosa.",
     formats: ["75 cl"],
-    image: "/images/products/spumante-brut-placeholder.jpg",
-    imageAlt: "Bottiglia elegante di spumante brut",
+    image: "/images/products/franciacorta-brut-placeholder.jpg",
+    imageAlt: "Bottiglia elegante di Franciacorta Brut",
+    callToAction: "Richiedi informazioni"
+  },
+  {
+    name: "Franciacorta Satèn",
+    slug: "franciacorta-saten",
+    category: "Franciacorta Satèn",
+    description:
+      "Un Franciacorta Satèn morbido e raffinato, dalla spuma cremosa e dal profilo delicato. Una proposta provvisoria pensata per raccontare il lato più vellutato della cantina.",
+    formats: ["75 cl"],
+    image: "/images/products/franciacorta-saten-placeholder.jpg",
+    imageAlt: "Bottiglia elegante di Franciacorta Satèn",
     callToAction: "Richiedi informazioni"
   }
 ];
