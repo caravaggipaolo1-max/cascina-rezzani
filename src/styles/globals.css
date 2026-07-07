@@ -133,10 +133,12 @@ textarea {
 }
 
 .gate-stage {
+  background:
+    radial-gradient(circle at 50% 46%, rgba(247, 244, 232, 0.96), rgba(230, 238, 196, 0.88) 42%, rgba(201, 217, 154, 0.76) 72%),
+    linear-gradient(180deg, var(--pistachio-100), var(--pistachio-300));
   isolation: isolate;
 }
 
-.gate-photo,
 .gate-leaf,
 .gate-shadow,
 .gate-logo-reveal {
@@ -144,30 +146,17 @@ textarea {
   position: absolute;
 }
 
-.gate-photo {
-  z-index: 0;
-}
-
-.gate-photo img,
 .gate-leaf img {
-  object-fit: cover;
-  object-position: center 58%;
-}
-
-.gate-photo-backdrop {
-  filter: saturate(0.86) contrast(0.92);
-  opacity: calc(0.22 + (var(--hero-progress) * 0.18));
-  transform: scale(1.03);
+  object-fit: contain;
+  object-position: center 51%;
+  padding: clamp(70px, 11vh, 118px) clamp(18px, 4vw, 60px) clamp(88px, 13vh, 142px);
 }
 
 .gate-logo-reveal {
   align-items: center;
-  background:
-    radial-gradient(circle at center, rgba(230, 238, 196, 0.96), rgba(201, 217, 154, 0.8) 42%, rgba(96, 126, 72, 0.72) 100%),
-    linear-gradient(180deg, rgba(247, 244, 232, 0.24), rgba(247, 244, 232, 0.82));
   display: flex;
   justify-content: center;
-  opacity: calc(0.7 + (var(--hero-progress) * 0.3));
+  opacity: calc(0.8 + (var(--hero-progress) * 0.2));
   z-index: 1;
 }
 
@@ -183,7 +172,7 @@ textarea {
 
 .gate-leaf {
   backface-visibility: hidden;
-  filter: saturate(0.92) contrast(0.96);
+  filter: saturate(0.98) contrast(1.02);
   pointer-events: none;
   transform-style: preserve-3d;
   transition: transform 120ms linear, filter 120ms linear;
@@ -193,36 +182,36 @@ textarea {
 
 .gate-leaf::after {
   background:
-    linear-gradient(90deg, rgba(18, 34, 24, 0.28), transparent 34%, rgba(18, 34, 24, 0.12)),
-    linear-gradient(0deg, rgba(18, 34, 24, 0.28), transparent 42%, rgba(18, 34, 24, 0.18));
+    linear-gradient(90deg, rgba(18, 34, 24, 0.18), transparent 34%, rgba(18, 34, 24, 0.08)),
+    linear-gradient(0deg, rgba(18, 34, 24, 0.12), transparent 42%, rgba(18, 34, 24, 0.08));
   content: "";
   inset: 0;
-  opacity: calc(0.92 - (var(--hero-progress) * 0.2));
+  opacity: calc(0.56 - (var(--hero-progress) * 0.18));
   position: absolute;
 }
 
 .gate-leaf-left {
   clip-path: inset(0 50% 0 0);
   transform: perspective(1400px)
-    translateX(calc(var(--hero-progress) * -22vw))
-    rotateY(calc(var(--hero-progress) * -58deg));
+    translateX(calc(var(--hero-progress) * -24vw))
+    rotateY(calc(var(--hero-progress) * -64deg));
   transform-origin: 11% 58%;
 }
 
 .gate-leaf-right {
   clip-path: inset(0 0 0 50%);
   transform: perspective(1400px)
-    translateX(calc(var(--hero-progress) * 22vw))
-    rotateY(calc(var(--hero-progress) * 58deg));
+    translateX(calc(var(--hero-progress) * 24vw))
+    rotateY(calc(var(--hero-progress) * 64deg));
   transform-origin: 89% 58%;
 }
 
 .gate-shadow {
   background:
-    linear-gradient(90deg, rgba(18, 34, 24, 0.62), transparent 21%, transparent 79%, rgba(18, 34, 24, 0.58)),
-    linear-gradient(180deg, rgba(18, 34, 24, 0.28), transparent 28%, rgba(18, 34, 24, 0.42));
-  opacity: calc(0.88 - (var(--hero-progress) * 0.42));
-  z-index: 3;
+    radial-gradient(ellipse at 50% 80%, rgba(30, 45, 25, 0.28), transparent 46%),
+    linear-gradient(180deg, rgba(18, 34, 24, 0.08), transparent 42%, rgba(18, 34, 24, 0.18));
+  opacity: calc(0.58 - (var(--hero-progress) * 0.2));
+  z-index: 0;
 }
 
 .hero-content {
@@ -236,10 +225,15 @@ textarea {
 
 .gate-content {
   align-self: end;
+  color: var(--green-950);
   max-width: 680px;
   opacity: calc(1 - (var(--hero-progress) * 0.36));
   padding-bottom: clamp(36px, 7vh, 76px);
-  text-shadow: 0 3px 20px rgba(14, 31, 22, 0.62);
+  text-shadow: 0 3px 22px rgba(247, 244, 232, 0.78);
+}
+
+.gate-content .hero-kicker {
+  color: var(--cassis-700);
 }
 
 .hero-kicker,
