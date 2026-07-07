@@ -223,7 +223,9 @@ textarea {
   height: clamp(430px, 68vh, 570px);
   inset: auto;
   top: 53%;
-  transform: translateY(-50%);
+  transition: transform 120ms linear;
+  transform-style: preserve-3d;
+  will-change: transform;
   width: clamp(76px, 8vw, 128px);
   z-index: 3;
 }
@@ -252,11 +254,21 @@ textarea {
 }
 
 .gate-pillar-left {
-  left: clamp(26px, 6vw, 92px);
+  left: clamp(18px, 4vw, 60px);
+  transform: translateY(-50%)
+    perspective(1400px)
+    translateX(calc(var(--hero-progress) * -24vw))
+    rotateY(calc(var(--hero-progress) * -64deg));
+  transform-origin: 50% 58%;
 }
 
 .gate-pillar-right {
-  right: clamp(26px, 6vw, 92px);
+  right: clamp(18px, 4vw, 60px);
+  transform: translateY(-50%)
+    perspective(1400px)
+    translateX(calc(var(--hero-progress) * 24vw))
+    rotateY(calc(var(--hero-progress) * 64deg));
+  transform-origin: 50% 58%;
 }
 
 .gate-shadow {
