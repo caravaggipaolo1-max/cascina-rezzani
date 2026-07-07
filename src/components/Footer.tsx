@@ -13,6 +13,7 @@ export function Footer() {
           <p>Registro Imprese: BS</p>
           <p>REA: BS - 628704</p>
           <p>Capitale sociale: 50.000 euro i.v.</p>
+          <p>Email: info@cascinarezzani.it</p>
           <p>PEC: cascinarezzani@lamiapec.it</p>
         </div>
         <nav aria-label="Link legali">

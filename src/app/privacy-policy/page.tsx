@@ -23,8 +23,8 @@ export default function PrivacyPolicyPage() {
           <p>
             Il titolare del trattamento e Cascina Rezzani S.R.L. - Società
             Agricola, con sede legale in Via Montorfano, 3 - 25033 Cologne
-            (BS), P.IVA e C.F. 04623470988, REA BS - 628704, PEC
-            cascinarezzani@lamiapec.it.
+            (BS), P.IVA e C.F. 04623470988, REA BS - 628704, email
+            info@cascinarezzani.it, PEC cascinarezzani@lamiapec.it.
           </p>
           <h2>Dati trattati</h2>
           <p>
@@ -51,7 +51,7 @@ export default function PrivacyPolicyPage() {
             L'interessato puo chiedere accesso, rettifica, cancellazione,
             limitazione, opposizione al trattamento e portabilita dei dati nei
             casi previsti dalla normativa. Le richieste possono essere inviate
-            alla PEC cascinarezzani@lamiapec.it.
+            a info@cascinarezzani.it o alla PEC cascinarezzani@lamiapec.it.
           </p>
           <h2>Aggiornamenti</h2>
           <p>

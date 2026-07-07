@@ -5,6 +5,7 @@ import { products } from "@/data/products";
 
 const COMPANY_NAME = "Cascina Rezzani S.R.L. - Società Agricola";
 const ADDRESS = "Via Montorfano, 3 - 25033 Cologne (BS)";
+const EMAIL = "info@cascinarezzani.it";
 const PEC = "cascinarezzani@lamiapec.it";
 const PHONE = "";
 const WHATSAPP = "";
@@ -44,6 +45,7 @@ export function ContactSection() {
             <strong>{COMPANY_NAME}</strong>
             <span>{ADDRESS}</span>
             {PHONE ? <a href={`tel:${PHONE}`}>{PHONE}</a> : null}
+            <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
             <a href={`mailto:${PEC}`}>PEC: {PEC}</a>
           </address>
           {WHATSAPP ? (
