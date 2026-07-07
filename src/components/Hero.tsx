@@ -60,6 +60,8 @@ export function Hero() {
           <Image src={gateImage} alt="" fill priority sizes="100vw" />
         </div>
 
+        <div className="gate-pillar gate-pillar-left" aria-hidden="true" />
+        <div className="gate-pillar gate-pillar-right" aria-hidden="true" />
         <div className="gate-shadow" aria-hidden="true" />
       </div>
     </section>
