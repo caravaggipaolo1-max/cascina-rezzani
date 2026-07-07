@@ -61,22 +61,6 @@ export function Hero() {
         </div>
 
         <div className="gate-shadow" aria-hidden="true" />
-
-        <div className="hero-content gate-content">
-          <p className="hero-kicker">Società Agricola Cascina Rezzani</p>
-          <h1>Benvenuti a Cascina Rezzani</h1>
-          <p>
-            Prodotti agricoli e specialità artigianali dal nostro territorio.
-          </p>
-          <div className="hero-actions">
-            <a className="button primary" href="#prodotti">
-              Scopri i prodotti
-            </a>
-            <a className="button secondary" href="#contatti">
-              Contattaci
-            </a>
-          </div>
-        </div>
       </div>
     </section>
   );
