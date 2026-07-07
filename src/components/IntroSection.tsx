@@ -2,15 +2,14 @@ export function IntroSection() {
   return (
     <section className="intro-section" aria-labelledby="intro-title">
       <div className="section-inner narrow">
-        <p className="eyebrow">Territorio e artigianalità</p>
+        <p className="eyebrow">Territorio</p>
         <h2 id="intro-title">
-          Una cascina, piccoli frutti e lavorazioni curate con attenzione.
+          Una azienda agricola ai piedi del Montorfano che trasforma i frutti
+          della terra in prodotti unici.
         </h2>
         <p>
-          Cascina Rezzani nasce dal desiderio di valorizzare la terra, i piccoli
-          frutti e le lavorazioni artigianali. Ogni prodotto racconta un legame
-          diretto con il territorio, con la materia prima e con il lavoro
-          quotidiano in cascina.
+          Cascina Rezzani nasce dal desiderio di valorizzare i prodotti della
+          terra. Ogni prodotto racconta un legame con la Franciacorta.
         </p>
       </div>
     </section>
