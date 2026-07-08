@@ -21,22 +21,22 @@ export default function PrivacyPolicyPage() {
           </p>
           <h2>Titolare del trattamento</h2>
           <p>
-            Il titolare del trattamento e Cascina Rezzani S.R.L. - Società
+            Il titolare del trattamento è Cascina Rezzani S.R.L. - Società
             Agricola, con sede legale in Via Montorfano, 3 - 25033 Cologne
-            (BS), P.IVA e C.F. 04623470988, REA BS - 628704, email
+            (BS), P. IVA e C.F. 04623470988, REA BS - 628704, e-mail
             info@cascinarezzani.it, PEC cascinarezzani@lamiapec.it.
           </p>
           <h2>Dati trattati</h2>
           <p>
-            Il sito ha finalita informative. I dati eventualmente comunicati
-            tramite email, PEC o modulo di contatto possono includere nome,
+            Il sito ha finalità informative. I dati eventualmente comunicati
+            tramite e-mail, PEC o modulo di contatto possono includere nome,
             recapiti e contenuto del messaggio. Il modulo attualmente presente
-            sul sito non e collegato a un sistema di invio esterno.
+            sul sito non è collegato a un sistema di invio esterno.
           </p>
-          <h2>Finalita e base giuridica</h2>
+          <h2>Finalità e base giuridica</h2>
           <p>
             I dati sono trattati per rispondere a richieste informative,
-            commerciali o di contatto. La base giuridica e l'esecuzione di
+            commerciali o di contatto. La base giuridica è l'esecuzione di
             misure precontrattuali o il legittimo interesse del titolare a
             gestire le comunicazioni ricevute.
           </p>
@@ -48,14 +48,14 @@ export default function PrivacyPolicyPage() {
           </p>
           <h2>Diritti dell'interessato</h2>
           <p>
-            L'interessato puo chiedere accesso, rettifica, cancellazione,
-            limitazione, opposizione al trattamento e portabilita dei dati nei
+            L'interessato può chiedere accesso, rettifica, cancellazione,
+            limitazione, opposizione al trattamento e portabilità dei dati nei
             casi previsti dalla normativa. Le richieste possono essere inviate
             a info@cascinarezzani.it o alla PEC cascinarezzani@lamiapec.it.
           </p>
           <h2>Aggiornamenti</h2>
           <p>
-            Questa informativa potra essere aggiornata in caso di modifica dei
+            Questa informativa potrà essere aggiornata in caso di modifica dei
             servizi del sito o dei trattamenti effettuati.
           </p>
         </section>

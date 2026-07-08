@@ -33,15 +33,15 @@ export default function CookiePolicyPage() {
           </p>
           <h2>Gestione preferenze</h2>
           <p>
-            Poiche sono utilizzati solo cookie tecnici, non e presente un
-            pannello di consenso. L'utente puo comunque gestire o eliminare i
+            Poiché sono utilizzati solo cookie tecnici, non è presente un
+            pannello di consenso. L'utente può comunque gestire o eliminare i
             cookie tramite le impostazioni del proprio browser.
           </p>
           <h2>Aggiornamenti</h2>
           <p>
             Se in futuro verranno introdotti strumenti di analisi, mappe, video,
-            social plugin o altri servizi di terze parti, questa policy sara
-            aggiornata e, ove necessario, verra introdotto un sistema di
+            social plugin o altri servizi di terze parti, questa policy sarà
+            aggiornata e, ove necessario, verrà introdotto un sistema di
             gestione del consenso.
           </p>
         </section>
