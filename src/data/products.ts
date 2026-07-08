@@ -24,20 +24,21 @@ export const products: Product[] = [
     slug: "creme-de-cassis",
     category: "Liquore al ribes nero",
     shortDescription:
-      "Liquore artigianale a base di ribes nero, intenso, aromatico e versatile. Una specialità pensata per degustazioni, abbinamenti e momenti conviviali.",
+      "Liquore al ribes nero dal gusto intenso, ricco e fruttato. Una specialità versatile, ideale da degustare fresca, con ghiaccio, con vino bianco o in abbinamento alle bollicine.",
     detailDescription: [
-      "La Crème de Cassis è una specialità al ribes nero dal profilo intenso e aromatico, pensata per valorizzare il frutto e la sua naturale profondità.",
-      "È ideale in degustazione, in abbinamento a dessert o come ingrediente per aperitivi e cocktail a base di vino o bollicine."
+      "La Crème de Cassis nasce per valorizzare il carattere profondo del ribes nero. Il frutto regala un colore scuro e brillante, un profumo avvolgente e un gusto pieno, morbido e persistente.",
+      "La lavorazione si ispira alla tradizione dei liquori al ribes: le bacche vengono lasciate macerare per estrarre aromi, colore e struttura, ottenendo un'infusione intensa che viene poi addolcita per raggiungere equilibrio e piacevolezza.",
+      "Si può gustare liscia, fresca o con ghiaccio. È ottima anche con vino bianco secco, con spumante o Franciacorta, e può diventare un ingrediente elegante per cocktail, dessert, gelati e preparazioni di pasticceria."
     ],
     formats: ["70 cl", "10 cl"],
     bottleStyle: "Bottiglia stile Armagnac",
-    alcohol: "Da confermare",
+    alcohol: "20% vol. - dato provvisorio",
     servingTemperature: "Da servire fresco",
     retailPrice: "Da definire",
     availability: "Disponibile su richiesta",
     origin: "Cascina Rezzani",
-    pairings: ["Dessert", "Gelato alla crema", "Aperitivi con bollicine"],
-    notes: ["Ribes nero", "Frutto maturo", "Profilo aromatico intenso"],
+    pairings: ["Vino bianco secco", "Franciacorta", "Gelato alla crema", "Dessert"],
+    notes: ["Ribes nero", "Frutto maturo", "Colore intenso", "Profilo aromatico ricco"],
     image: "/images/products/creme-de-cassis-placeholder.jpg",
     imageAlt: "Bottiglia elegante di liquore al ribes nero",
     callToAction: "Richiedi informazioni"

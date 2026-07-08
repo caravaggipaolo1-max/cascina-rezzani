@@ -41,6 +41,8 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
     notFound();
   }
 
+  const isCremeDeCassis = product.slug === "creme-de-cassis";
+
   return (
     <>
       <Header compact />
@@ -57,10 +59,14 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
               />
             </div>
             <div className="product-detail-copy">
-              <Link className="back-link" href="/#prodotti">
-                Torna ai prodotti
-              </Link>
-              <p className="eyebrow">{product.category}</p>
+              {isCremeDeCassis ? null : (
+                <>
+                  <Link className="back-link" href="/#prodotti">
+                    Torna ai prodotti
+                  </Link>
+                  <p className="eyebrow">{product.category}</p>
+                </>
+              )}
               <h1>{product.name}</h1>
               <p className="product-lead">{product.shortDescription}</p>
               <div className="product-detail-actions">
