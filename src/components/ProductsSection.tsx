@@ -7,7 +7,7 @@ export function ProductsSection() {
       <div className="section-inner">
         <div className="section-heading">
           <p className="eyebrow">I prodotti</p>
-          <h2 id="products-title">Specialità pensate per degustazioni e convivialità.</h2>
+          <h2 id="products-title">Le Nostre Specialità</h2>
         </div>
         <div className="products-grid">
           {products.map((product) => (
