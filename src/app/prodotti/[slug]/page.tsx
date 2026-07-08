@@ -88,6 +88,25 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
               {product.detailDescription.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
+
+              <div className="product-lists-grid product-lists-inline">
+                <div>
+                  <h2>Note</h2>
+                  <ul>
+                    {product.notes.map((note) => (
+                      <li key={note}>{note}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h2>Abbinamenti</h2>
+                  <ul>
+                    {product.pairings.map((pairing) => (
+                      <li key={pairing}>{pairing}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </div>
 
             <aside className="product-detail-panel" aria-label="Scheda prodotto">
@@ -125,27 +144,6 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                 ) : null}
               </dl>
             </aside>
-          </div>
-        </section>
-
-        <section className="product-detail-section muted">
-          <div className="section-inner product-lists-grid">
-            <div>
-              <h2>Note</h2>
-              <ul>
-                {product.notes.map((note) => (
-                  <li key={note}>{note}</li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h2>Abbinamenti</h2>
-              <ul>
-                {product.pairings.map((pairing) => (
-                  <li key={pairing}>{pairing}</li>
-                ))}
-              </ul>
-            </div>
           </div>
         </section>
       </main>

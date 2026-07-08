@@ -674,6 +674,16 @@ textarea {
   margin: 0 0 18px;
 }
 
+.product-lists-inline {
+  border-top: 1px solid var(--line);
+  margin-top: clamp(28px, 5vw, 44px);
+  padding-top: clamp(24px, 4vw, 34px);
+}
+
+.product-lists-inline h2 {
+  font-size: clamp(1.35rem, 3vw, 1.8rem);
+}
+
 .product-detail-panel {
   align-self: start;
   background: white;
