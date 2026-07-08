@@ -38,7 +38,7 @@ export function ContactSection() {
     <section className="contact-section" id="contatti" aria-labelledby="contact-title">
       <div className="section-inner contact-grid">
         <div className="contact-copy">
-          <p className="eyebrow">Contatti</p>
+          <p className="eyebrow">Contattaci</p>
           <h2 id="contact-title">Raccontaci cosa vorresti scoprire.</h2>
           <address>
             <strong>{COMPANY_NAME}</strong>
