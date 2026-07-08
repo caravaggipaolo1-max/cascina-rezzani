@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const values = ["Territorio", "Materia prima", "Lavorazione artigianale"];
+const values = ["Uva", "Ribes", "Fichi"];
 
 export function StorySection() {
   return (
@@ -16,12 +16,16 @@ export function StorySection() {
         </div>
         <div className="story-copy">
           <p className="eyebrow">La nostra storia</p>
-          <h2 id="story-title">Tradizione agricola e visione contemporanea.</h2>
+          <h2 id="story-title">
+            Una realtà in crescita, costruita passo dopo passo.
+          </h2>
           <p>
-            La Società Agricola Cascina Rezzani unisce tradizione agricola e
-            visione contemporanea. Dalla cura della terra alla trasformazione dei
-            prodotti, l'obiettivo è creare specialità riconoscibili, autentiche
-            e legate al territorio.
+            Cascina Rezzani è un'azienda agricola giovane, ma con radici
+            profonde nel territorio. Il progetto nasce ai piedi del Montorfano,
+            dove la cura della terra incontra l'idea di trasformare i suoi
+            frutti in prodotti unici. Una realtà in crescita, costruita passo
+            dopo passo, con attenzione alla qualità, alla semplicità e
+            all'identità locale.
           </p>
           <div className="values-list" aria-label="Valori aziendali">
             {values.map((value) => (
