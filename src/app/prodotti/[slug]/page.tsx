@@ -142,6 +142,12 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                     <dd>{product.bottleStyle}</dd>
                   </div>
                 ) : null}
+                {product.technicalDetails?.map((detail) => (
+                  <div key={detail.label}>
+                    <dt>{detail.label}</dt>
+                    <dd>{detail.value}</dd>
+                  </div>
+                ))}
               </dl>
             </aside>
           </div>

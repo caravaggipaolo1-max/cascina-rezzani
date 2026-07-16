@@ -13,6 +13,10 @@ export type Product = {
   origin: string;
   pairings: string[];
   notes: string[];
+  technicalDetails?: Array<{
+    label: string;
+    value: string;
+  }>;
   image: string;
   imageAlt: string;
   callToAction: string;
@@ -39,7 +43,7 @@ export const products: Product[] = [
     origin: "Cascina Rezzani",
     pairings: ["Vino bianco secco", "Franciacorta", "Gelato alla crema", "Dessert"],
     notes: ["Ribes nero", "Frutto maturo", "Colore intenso", "Profilo aromatico ricco"],
-    image: "/images/products/creme-de-cassis-placeholder.jpg",
+    image: "/images/products/creme-de-cassis-render.jpg",
     imageAlt: "Bottiglia elegante di liquore al ribes nero",
     callToAction: "Richiedi informazioni"
   },
@@ -61,7 +65,7 @@ export const products: Product[] = [
     origin: "Cascina Rezzani",
     pairings: ["Salumi", "Formaggi freschi", "Aperitivi rustici"],
     notes: ["Ribes", "Freschezza", "Finale fruttato"],
-    image: "/images/products/birra-ribes-placeholder.jpg",
+    image: "/images/products/birra-ribes-render.jpg",
     imageAlt: "Bottiglia artigianale di birra al ribes",
     callToAction: "Richiedi informazioni"
   },
@@ -70,20 +74,30 @@ export const products: Product[] = [
     slug: "franciacorta-brut",
     category: "Metodo Classico",
     shortDescription:
-      "Un Franciacorta Brut elegante e asciutto, pensato per accompagnare aperitivi, degustazioni e momenti conviviali con una bollicina fine e armoniosa.",
+      "Un Franciacorta Brut fresco ed equilibrato, ottenuto da uve Chardonnay e caratterizzato da una beva elegante, minerale e sapida.",
     detailDescription: [
-      "Il Franciacorta Brut è una bollicina secca ed elegante, pensata per chi cerca freschezza, equilibrio e una beva pulita.",
-      "La descrizione è provvisoria e verrà completata con scheda tecnica definitiva, vitigni, affinamento e note di degustazione ufficiali."
+      "Il Franciacorta Brut Cascina Rezzani nasce da una cuvée di vini Chardonnay. È una bollicina fresca ed equilibrata, pensata per esprimere il carattere classico della Franciacorta con una lettura pulita, elegante e immediata.",
+      "L'affinamento in acciaio e la successiva permanenza in bottiglia sui lieviti valorizzano le note minerali e sapide, mantenendo un profilo asciutto, fine e piacevole alla beva.",
+      "Al calice si presenta giallo paglierino con riflessi dorati, con perlage fine e persistente. Il profumo richiama note floreali intense, mentre il sorso è elegante e fresco, con sentori di pesca e una piacevole chiusura minerale."
     ],
-    formats: ["75 cl"],
-    alcohol: "12,5% vol. - dato provvisorio",
+    formats: ["75 cl", "1,5 L"],
+    alcohol: "12,5% vol.",
     servingTemperature: "6-8 °C",
     retailPrice: "22€",
     availability: "Disponibile su richiesta",
     origin: "Franciacorta",
-    pairings: ["Aperitivi", "Antipasti", "Pesce", "Formaggi delicati"],
-    notes: ["Bollicina fine", "Profilo asciutto", "Freschezza"],
-    image: "/images/products/franciacorta-brut-placeholder.jpg",
+    pairings: ["Aperitivi", "Antipasti di mare", "Verdure", "Piatti delicati"],
+    notes: ["100% Chardonnay", "Fresco ed equilibrato", "Mineralità", "Perlage fine e persistente"],
+    technicalDetails: [
+      { label: "Affinamento sui lieviti", value: "Minimo 20 mesi" },
+      { label: "Zuccheri residui", value: "4,4 g/l" },
+      { label: "Acidità totale", value: "6,1 g/l" },
+      { label: "Colore", value: "Giallo paglierino con riflessi dorati" },
+      { label: "Perlage", value: "Fine e persistente, con schiuma cremosa" },
+      { label: "Profumo", value: "Note floreali intense con un piacevole finale minerale di grafite" },
+      { label: "Sapore", value: "Elegante e fresco, con sentori di pesca accompagnati da piacevoli note minerali" }
+    ],
+    image: "/images/products/franciacorta-brut-render.jpg",
     imageAlt: "Bottiglia elegante di Franciacorta Brut",
     callToAction: "Richiedi informazioni"
   },
@@ -92,20 +106,30 @@ export const products: Product[] = [
     slug: "franciacorta-saten",
     category: "Metodo Classico",
     shortDescription:
-      "Un Franciacorta Satèn morbido e raffinato, dalla spuma cremosa e dal profilo delicato. Una proposta provvisoria pensata per raccontare il lato più vellutato della cantina.",
+      "Un Franciacorta Satèn elegante e vellutato, pensato per esaltare la morbidezza dello Chardonnay e la finezza della bollicina.",
     detailDescription: [
-      "Il Franciacorta Satèn è una proposta più morbida e vellutata, caratterizzata da una spuma cremosa e da una sensazione elegante al palato.",
-      "La descrizione è provvisoria e verrà completata con dati definitivi su uvaggio, affinamento, annata e profilo sensoriale."
+      "Il Franciacorta Satèn Cascina Rezzani è una bollicina elegante, morbida e raffinata. Nasce per raccontare il lato più vellutato dello Chardonnay coltivato in Franciacorta, con un'effervescenza delicata e una sensazione cremosa al palato.",
+      "È un blanc de blancs dalla personalità fine e armoniosa, in cui mineralità e sapidità si fondono con la morbida eleganza del vitigno. L'affinamento in acciaio e la lunga permanenza sui lieviti contribuiscono a costruire complessità, equilibrio e persistenza.",
+      "Al calice si presenta giallo paglierino con riflessi dorati. Il perlage è estremamente fine e cremoso, con bollicine setose e persistenti. Il profumo richiama fiori bianchi, nocciola tostata, miele d'acacia e un tocco di agrumi canditi."
     ],
-    formats: ["75 cl"],
-    alcohol: "12,5% vol. - dato provvisorio",
+    formats: ["75 cl", "1,5 L"],
+    alcohol: "12,0% vol.",
     servingTemperature: "6-8 °C",
     retailPrice: "22€",
     availability: "Disponibile su richiesta",
     origin: "Franciacorta",
-    pairings: ["Primi delicati", "Pesce", "Carni bianche", "Formaggi morbidi"],
-    notes: ["Spuma cremosa", "Profilo morbido", "Eleganza"],
-    image: "/images/products/franciacorta-saten-placeholder.jpg",
+    pairings: ["Antipasti di pesce", "Risotti delicati", "Crostacei", "Formaggi freschi"],
+    notes: ["Blanc de blancs", "Elegante", "Bollicina setosa", "Struttura vellutata"],
+    technicalDetails: [
+      { label: "Affinamento sui lieviti", value: "Oltre 30 mesi" },
+      { label: "Zuccheri residui", value: "4,6 g/l" },
+      { label: "Acidità totale", value: "5,7 g/l" },
+      { label: "Colore", value: "Giallo paglierino con riflessi dorati" },
+      { label: "Perlage", value: "Estremamente fine e cremoso, con bollicine setose e persistenti" },
+      { label: "Profumo", value: "Sentori di fiori bianchi, nocciola tostata e miele d'acacia, con un tocco di agrumi canditi" },
+      { label: "Sapore", value: "Morbido ed equilibrato, con struttura vellutata, note di pasta frolla e vaniglia e finale persistente con sfumature minerali" }
+    ],
+    image: "/images/products/franciacorta-saten-render.jpg",
     imageAlt: "Bottiglia elegante di Franciacorta Satèn",
     callToAction: "Richiedi informazioni"
   }
