@@ -52,12 +52,13 @@ export const products: Product[] = [
     slug: "birra-ribes",
     category: "Birra artigianale",
     shortDescription:
-      "Una birra originale e fruttata, pensata per valorizzare il carattere aromatico del ribes con una bevuta fresca, equilibrata e distintiva.",
+      "Una birra artigianale al ribes, fresca e piacevolmente fruttata, nata per raccontare il lato più vivace dei frutti coltivati ai piedi del Montorfano.",
     detailDescription: [
-      "La birra al ribes nasce come proposta fresca e originale, con una componente fruttata pensata per rendere la bevuta riconoscibile senza appesantirla.",
-      "È indicata per aperitivi informali, degustazioni in cascina e abbinamenti con piatti semplici e saporiti."
+      "La Birra al Ribes Cascina Rezzani unisce il carattere della birra artigianale alla freschezza aromatica del ribes. Un incontro originale, pensato per valorizzare un frutto coltivato nel nostro territorio e trasformarlo in una bevuta dalla personalita' riconoscibile.",
+      "Al naso emergono note di frutto rosso e ribes, mentre al palato la componente fruttata accompagna la bevuta con equilibrio e una piacevole vivacita'. Il finale lascia una sensazione fresca, invitando a un altro sorso.",
+      "Versatile e conviviale, e' ideale per l'aperitivo, per una degustazione in cascina o per accompagnare salumi, formaggi freschi e piatti semplici dal gusto deciso."
     ],
-    formats: ["75 cl", "50 cl"],
+    formats: ["75 cl", "33 cl"],
     alcohol: "Da confermare",
     servingTemperature: "6-8 °C",
     retailPrice: "Da definire",
