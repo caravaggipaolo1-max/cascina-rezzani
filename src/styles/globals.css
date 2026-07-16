@@ -405,6 +405,29 @@ textarea {
   background: var(--cream-100);
 }
 
+.intro-grid {
+  display: grid;
+  gap: clamp(28px, 5vw, 70px);
+}
+
+.intro-copy {
+  align-self: center;
+}
+
+.intro-image {
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  min-height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.intro-image img {
+  object-fit: cover;
+  object-position: 36% center;
+}
+
 .intro-section h2,
 .story-copy h2,
 .section-heading h2,
@@ -875,6 +898,10 @@ textarea {
 }
 
 @media (min-width: 860px) {
+  .intro-grid {
+    grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.72fr);
+  }
+
   .story-grid,
   .contact-grid {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);

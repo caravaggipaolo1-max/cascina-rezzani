@@ -8,8 +8,8 @@ export function StorySection() {
       <div className="section-inner story-grid">
         <div className="story-image">
           <Image
-            src="/images/cascina/cascina-placeholder.jpg"
-            alt="Cascina agricola italiana immersa nel paesaggio naturale"
+            src="/images/cascina/portico-cascina.jpg"
+            alt="Portico di Cascina Rezzani affacciato sul paesaggio del Montorfano"
             fill
             sizes="(min-width: 900px) 50vw, 100vw"
           />
