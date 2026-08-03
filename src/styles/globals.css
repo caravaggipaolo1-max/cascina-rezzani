@@ -171,29 +171,29 @@ textarea {
 }
 
 .gate-side-left {
-  clip-path: inset(0 74% 0 0);
+  clip-path: inset(0 73.8% 0 0);
 }
 
 .gate-side-right {
-  clip-path: inset(0 0 0 74%);
+  clip-path: inset(0 0 0 76%);
 }
 
 .gate-leaf {
   backface-visibility: hidden;
-  filter: saturate(1.28) contrast(1.06);
+  filter: saturate(1.38) contrast(1.1) brightness(0.95);
   will-change: transform;
 }
 
 .gate-leaf-left {
-  clip-path: polygon(25.3% 39%, 33% 39%, 42% 31%, 49.3% 26%, 51% 26%, 51% 85%, 25.3% 85%);
+  clip-path: polygon(26.2% 39%, 33% 39%, 42% 31%, 49% 26%, 50% 26%, 50% 85%, 26.2% 85%);
   transform: scaleX(calc(1 - (var(--hero-progress) * 0.86)));
-  transform-origin: 25.3% 60%;
+  transform-origin: 26.2% 60%;
 }
 
 .gate-leaf-right {
-  clip-path: polygon(49% 26%, 50.7% 26%, 58% 31%, 67% 39%, 74.7% 39%, 74.7% 85%, 49% 85%);
+  clip-path: polygon(50% 26%, 51% 26%, 58% 31%, 67% 39%, 76% 39%, 76% 85%, 50% 85%);
   transform: scaleX(calc(1 - (var(--hero-progress) * 0.86)));
-  transform-origin: 74.7% 60%;
+  transform-origin: 76% 60%;
 }
 
 .gate-logo-reveal {

@@ -29,7 +29,6 @@ export function Hero() {
       const scrollable = Math.max(1, rect.height - window.innerHeight);
       const progress = Math.min(1, Math.max(0, -rect.top / scrollable));
       hero.style.setProperty("--hero-progress", progress.toFixed(3));
-
     };
 
     updateProgress();
