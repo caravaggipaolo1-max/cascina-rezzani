@@ -138,6 +138,7 @@ textarea {
 }
 
 .gate-sequence,
+.gate-surroundings,
 .gate-logo-reveal {
   inset: 0;
   position: absolute;
@@ -145,19 +146,38 @@ textarea {
 
 .gate-sequence {
   overflow: hidden;
+  z-index: 3;
+}
+
+.gate-surroundings {
+  overflow: hidden;
   z-index: 2;
 }
 
-.gate-frame {
+.gate-frame,
+.gate-surrounding {
   filter: saturate(0.96) contrast(1.01);
   height: 100%;
   object-fit: cover;
   object-position: center 28%;
   position: absolute;
   transform: scale(calc(1 + (var(--hero-progress) * 0.035))) translateY(calc(var(--hero-progress) * -1%));
-  transition: opacity 180ms linear;
+  transition: opacity 130ms linear;
   will-change: opacity, transform;
   width: 100%;
+}
+
+.gate-surrounding-left {
+  clip-path: inset(0 74.5% 0 0);
+}
+
+.gate-surrounding-right {
+  clip-path: inset(0 0 0 74.5%);
+}
+
+.gate-frame {
+  clip-path: inset(0 24.5% 0 24.5%);
+  filter: sepia(0.1) saturate(1.16) contrast(1.05) hue-rotate(-4deg);
 }
 
 .gate-frame-current { opacity: var(--gate-current-opacity, 1); }
@@ -859,6 +879,12 @@ textarea {
   }
 
   .gate-frame {
+    object-fit: contain;
+    object-position: center;
+    transform: translateY(3svh) scale(calc(1.58 + (var(--hero-progress) * 0.05)));
+  }
+
+  .gate-surrounding {
     object-fit: contain;
     object-position: center;
     transform: translateY(3svh) scale(calc(1.58 + (var(--hero-progress) * 0.05)));

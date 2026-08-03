@@ -35,6 +35,8 @@ export function Hero() {
       return;
     }
 
+    let animationFrame = 0;
+
     const updateProgress = () => {
       const rect = hero.getBoundingClientRect();
       const scrollable = Math.max(1, rect.height - window.innerHeight);
@@ -58,11 +60,24 @@ export function Hero() {
     };
 
     updateProgress();
-    window.addEventListener("scroll", updateProgress, { passive: true });
+
+    const requestUpdate = () => {
+      if (animationFrame) {
+        return;
+      }
+
+      animationFrame = window.requestAnimationFrame(() => {
+        updateProgress();
+        animationFrame = 0;
+      });
+    };
+
+    window.addEventListener("scroll", requestUpdate, { passive: true });
     window.addEventListener("resize", updateProgress);
 
     return () => {
-      window.removeEventListener("scroll", updateProgress);
+      window.cancelAnimationFrame(animationFrame);
+      window.removeEventListener("scroll", requestUpdate);
       window.removeEventListener("resize", updateProgress);
     };
   }, []);
@@ -79,6 +94,11 @@ export function Hero() {
             height={244}
             priority
           />
+        </div>
+
+        <div className="gate-surroundings" aria-hidden="true">
+          <img className="gate-surrounding gate-surrounding-left" src={gateFrames[0]} alt="" />
+          <img className="gate-surrounding gate-surrounding-right" src={gateFrames[0]} alt="" />
         </div>
 
         <div className="gate-sequence" aria-hidden="true">
