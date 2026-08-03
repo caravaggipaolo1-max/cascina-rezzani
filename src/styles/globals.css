@@ -254,7 +254,7 @@ textarea {
 }
 
 .intro-section {
-  background: var(--cream-100);
+  background: var(--cream-200);
 }
 
 .intro-grid {
@@ -271,8 +271,10 @@ textarea {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   min-height: 300px;
+  min-width: 0;
   overflow: hidden;
   position: relative;
+  width: 100%;
 }
 
 .intro-image img {
@@ -321,8 +323,10 @@ textarea {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   min-height: 320px;
+  min-width: 0;
   overflow: hidden;
   position: relative;
+  width: 100%;
 }
 
 .story-image img {
@@ -781,6 +785,11 @@ textarea {
 }
 
 @media (max-width: 679px) {
+  .intro-image,
+  .story-image {
+    min-height: 0;
+  }
+
   .site-header {
     align-items: flex-start;
     flex-direction: column;

@@ -20,7 +20,7 @@ export function IntroSection() {
             src="/images/cascina/vigneto-montorfano.jpg"
             alt="Grappoli d'uva nei vigneti ai piedi del Montorfano"
             fill
-            sizes="(min-width: 900px) 42vw, 100vw"
+            sizes="(min-width: 900px) 42vw, calc(100vw - 36px)"
           />
         </div>
       </div>

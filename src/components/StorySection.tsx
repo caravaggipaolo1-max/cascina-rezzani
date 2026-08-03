@@ -11,7 +11,7 @@ export function StorySection() {
             src="/images/cascina/portico-cascina.jpg"
             alt="Portico di Cascina Rezzani affacciato sul paesaggio del Montorfano"
             fill
-            sizes="(min-width: 900px) 50vw, 100vw"
+            sizes="(min-width: 900px) 50vw, calc(100vw - 36px)"
           />
         </div>
         <div className="story-copy">
