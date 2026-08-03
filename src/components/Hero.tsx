@@ -5,18 +5,8 @@ import { useEffect, useRef } from "react";
 
 export function Hero() {
   const heroRef = useRef<HTMLElement | null>(null);
-  const currentFrameRef = useRef<HTMLImageElement | null>(null);
-  const nextFrameRef = useRef<HTMLImageElement | null>(null);
   const logoImage = "/images/logos/cascina-rezzani-logo.png";
-  const gateFrames = [
-    "/images/hero/gate-cutouts/01-closed.png",
-    "/images/hero/gate-cutouts/02-opening.png",
-    "/images/hero/gate-cutouts/03-opening.png",
-    "/images/hero/gate-cutouts/04-opening.png",
-    "/images/hero/gate-cutouts/05-opening.png",
-    "/images/hero/gate-cutouts/06-opening.png",
-    "/images/hero/gate-cutouts/07-open.png",
-  ];
+  const gateImage = "/images/hero/gate-cutouts/01-closed.png";
 
   useEffect(() => {
     const hero = heroRef.current;
@@ -29,9 +19,6 @@ export function Hero() {
 
     if (reducedMotion.matches) {
       hero.style.setProperty("--hero-progress", "1");
-      currentFrameRef.current?.setAttribute("src", gateFrames[gateFrames.length - 1]);
-      hero.style.setProperty("--gate-current-opacity", "1");
-      hero.style.setProperty("--gate-next-opacity", "0");
       return;
     }
 
@@ -43,20 +30,6 @@ export function Hero() {
       const progress = Math.min(1, Math.max(0, -rect.top / scrollable));
       hero.style.setProperty("--hero-progress", progress.toFixed(3));
 
-      const framePosition = progress * (gateFrames.length - 1);
-      const activeFrame = Math.floor(framePosition);
-      const blend = framePosition - activeFrame;
-
-      if (hero.dataset.activeGateFrame !== String(activeFrame)) {
-        currentFrameRef.current?.setAttribute("src", gateFrames[activeFrame]);
-        nextFrameRef.current?.setAttribute("src", gateFrames[Math.min(activeFrame + 1, gateFrames.length - 1)]);
-        const preloadFrame = new window.Image();
-        preloadFrame.src = gateFrames[Math.min(activeFrame + 2, gateFrames.length - 1)];
-        hero.dataset.activeGateFrame = String(activeFrame);
-      }
-
-      hero.style.setProperty("--gate-current-opacity", (1 - blend).toFixed(3));
-      hero.style.setProperty("--gate-next-opacity", blend.toFixed(3));
     };
 
     updateProgress();
@@ -96,24 +69,14 @@ export function Hero() {
           />
         </div>
 
-        <div className="gate-surroundings" aria-hidden="true">
-          <img className="gate-surrounding gate-surrounding-left" src={gateFrames[0]} alt="" />
-          <img className="gate-surrounding gate-surrounding-right" src={gateFrames[0]} alt="" />
+        <div className="gate-fixed" aria-hidden="true">
+          <img className="gate-side gate-side-left" src={gateImage} alt="" />
+          <img className="gate-side gate-side-right" src={gateImage} alt="" />
         </div>
 
-        <div className="gate-sequence" aria-hidden="true">
-          <img
-            className="gate-frame gate-frame-current"
-            ref={currentFrameRef}
-            src={gateFrames[0]}
-            alt=""
-          />
-          <img
-            className="gate-frame gate-frame-next"
-            ref={nextFrameRef}
-            src={gateFrames[1]}
-            alt=""
-          />
+        <div className="gate-leaves" aria-hidden="true">
+          <img className="gate-leaf gate-leaf-left" src={gateImage} alt="" />
+          <img className="gate-leaf gate-leaf-right" src={gateImage} alt="" />
         </div>
       </div>
     </section>
