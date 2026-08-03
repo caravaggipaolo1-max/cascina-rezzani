@@ -161,9 +161,8 @@ textarea {
   object-fit: cover;
   object-position: center 28%;
   position: absolute;
-  transform: scale(calc(1 + (var(--hero-progress) * 0.035))) translateY(calc(var(--hero-progress) * -1%));
-  transition: opacity 130ms linear;
-  will-change: opacity, transform;
+  transform: none;
+  will-change: opacity;
   width: 100%;
 }
 
@@ -881,13 +880,13 @@ textarea {
   .gate-frame {
     object-fit: contain;
     object-position: center;
-    transform: translateY(3svh) scale(calc(1.58 + (var(--hero-progress) * 0.05)));
+    transform: translateY(3svh) scale(1.58);
   }
 
   .gate-surrounding {
     object-fit: contain;
     object-position: center;
-    transform: translateY(3svh) scale(calc(1.58 + (var(--hero-progress) * 0.05)));
+    transform: translateY(3svh) scale(1.58);
   }
 
   .gate-reveal-logo {
