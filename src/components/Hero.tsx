@@ -9,13 +9,13 @@ export function Hero() {
   const nextFrameRef = useRef<HTMLImageElement | null>(null);
   const logoImage = "/images/logos/cascina-rezzani-logo.png";
   const gateFrames = [
-    "/images/hero/gate-sequence/01-closed.jpg",
-    "/images/hero/gate-sequence/02-opening.jpg",
-    "/images/hero/gate-sequence/03-opening.jpg",
-    "/images/hero/gate-sequence/04-opening.jpg",
-    "/images/hero/gate-sequence/05-opening.jpg",
-    "/images/hero/gate-sequence/06-opening.jpg",
-    "/images/hero/gate-sequence/07-open.jpg",
+    "/images/hero/gate-cutouts/01-closed.png",
+    "/images/hero/gate-cutouts/02-opening.png",
+    "/images/hero/gate-cutouts/03-opening.png",
+    "/images/hero/gate-cutouts/04-opening.png",
+    "/images/hero/gate-cutouts/05-opening.png",
+    "/images/hero/gate-cutouts/06-opening.png",
+    "/images/hero/gate-cutouts/07-open.png",
   ];
 
   useEffect(() => {
@@ -48,6 +48,8 @@ export function Hero() {
       if (hero.dataset.activeGateFrame !== String(activeFrame)) {
         currentFrameRef.current?.setAttribute("src", gateFrames[activeFrame]);
         nextFrameRef.current?.setAttribute("src", gateFrames[Math.min(activeFrame + 1, gateFrames.length - 1)]);
+        const preloadFrame = new window.Image();
+        preloadFrame.src = gateFrames[Math.min(activeFrame + 2, gateFrames.length - 1)];
         hero.dataset.activeGateFrame = String(activeFrame);
       }
 

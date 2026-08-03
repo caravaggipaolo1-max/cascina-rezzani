@@ -119,7 +119,7 @@ textarea {
 .hero {
   --hero-progress: 0;
   background: var(--pistachio-100);
-  height: 178svh;
+  height: 220svh;
   position: relative;
 }
 
@@ -133,7 +133,7 @@ textarea {
 }
 
 .gate-stage {
-  background: #284637;
+  background: var(--pistachio-200);
   isolation: isolate;
 }
 
@@ -149,13 +149,13 @@ textarea {
 }
 
 .gate-frame {
-  filter: saturate(0.96) contrast(1.02);
+  filter: saturate(0.96) contrast(1.01);
   height: 100%;
   object-fit: cover;
-  object-position: center 48%;
+  object-position: center 28%;
   position: absolute;
-  transform: scale(calc(1 + (var(--hero-progress) * 0.065))) translateY(calc(var(--hero-progress) * -1.8%));
-  transition: opacity 90ms linear;
+  transform: scale(calc(1 + (var(--hero-progress) * 0.035))) translateY(calc(var(--hero-progress) * -1%));
+  transition: opacity 180ms linear;
   will-change: opacity, transform;
   width: 100%;
 }
@@ -168,7 +168,7 @@ textarea {
   display: flex;
   justify-content: center;
   pointer-events: none;
-  z-index: 3;
+  z-index: 1;
 }
 
 .gate-reveal-logo {
@@ -859,7 +859,9 @@ textarea {
   }
 
   .gate-frame {
-    object-position: center 45%;
+    object-fit: contain;
+    object-position: center;
+    transform: translateY(3svh) scale(calc(1.58 + (var(--hero-progress) * 0.05)));
   }
 
   .gate-reveal-logo {
