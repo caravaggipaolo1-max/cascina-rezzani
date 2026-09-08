@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { ProductImageCarousel } from "@/components/ProductImageCarousel";
 import { getProductBySlug, products } from "@/data/products";
 
 type ProductPageProps = {
@@ -42,6 +43,9 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
   }
 
   const isCremeDeCassis = product.slug === "creme-de-cassis";
+  const productImages = product.gallery
+    ? [{ src: product.image, alt: product.imageAlt }, ...product.gallery]
+    : null;
 
   return (
     <>
@@ -49,15 +53,19 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
       <main className="product-detail-page">
         <section className="product-detail-hero">
           <div className="section-inner product-detail-grid">
-            <div className="product-detail-image">
-              <Image
-                src={product.image}
-                alt={product.imageAlt}
-                fill
-                priority
-                sizes="(min-width: 900px) 44vw, 100vw"
-              />
-            </div>
+            {productImages ? (
+              <ProductImageCarousel images={productImages} priority />
+            ) : (
+              <div className="product-detail-image">
+                <Image
+                  src={product.image}
+                  alt={product.imageAlt}
+                  fill
+                  priority
+                  sizes="(min-width: 900px) 44vw, 100vw"
+                />
+              </div>
+            )}
             <div className="product-detail-copy">
               {isCremeDeCassis ? null : (
                 <>

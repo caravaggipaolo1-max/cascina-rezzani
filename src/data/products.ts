@@ -17,6 +17,10 @@ export type Product = {
     label: string;
     value: string;
   }>;
+  gallery?: Array<{
+    src: string;
+    alt: string;
+  }>;
   image: string;
   imageAlt: string;
   callToAction: string;
@@ -45,29 +49,6 @@ export const products: Product[] = [
     notes: ["Ribes nero", "Frutto maturo", "Colore intenso", "Profilo aromatico ricco"],
     image: "/images/products/creme-de-cassis-render.jpg",
     imageAlt: "Bottiglia elegante di liquore al ribes nero",
-    callToAction: "Richiedi informazioni"
-  },
-  {
-    name: "Birra al ribes",
-    slug: "birra-ribes",
-    category: "Birra artigianale",
-    shortDescription:
-      "Una birra artigianale al ribes, fresca e piacevolmente fruttata, nata per raccontare il lato più vivace dei frutti coltivati ai piedi del Montorfano.",
-    detailDescription: [
-      "La Birra al Ribes Cascina Rezzani unisce il carattere della birra artigianale alla freschezza aromatica del ribes. Un incontro originale, pensato per valorizzare un frutto coltivato nel nostro territorio e trasformarlo in una bevuta dalla personalita' riconoscibile.",
-      "Al naso emergono note di frutto rosso e ribes, mentre al palato la componente fruttata accompagna la bevuta con equilibrio e una piacevole vivacita'. Il finale lascia una sensazione fresca, invitando a un altro sorso.",
-      "Versatile e conviviale, e' ideale per l'aperitivo, per una degustazione in cascina o per accompagnare salumi, formaggi freschi e piatti semplici dal gusto deciso."
-    ],
-    formats: ["75 cl", "33 cl"],
-    alcohol: "Da confermare",
-    servingTemperature: "6-8 °C",
-    retailPrice: "Da definire",
-    availability: "Disponibile su richiesta",
-    origin: "Cascina Rezzani",
-    pairings: ["Salumi", "Formaggi freschi", "Aperitivi rustici"],
-    notes: ["Ribes", "Freschezza", "Finale fruttato"],
-    image: "/images/products/birra-ribes-render.jpg",
-    imageAlt: "Bottiglia artigianale di birra al ribes",
     callToAction: "Richiedi informazioni"
   },
   {
@@ -100,6 +81,16 @@ export const products: Product[] = [
     ],
     image: "/images/products/franciacorta-brut-render.jpg",
     imageAlt: "Bottiglia elegante di Franciacorta Brut",
+    gallery: [
+      {
+        src: "/images/products/franciacorta-brut-vigneto.jpg",
+        alt: "Bottiglia di Franciacorta Brut Cascina Rezzani tra i filari"
+      },
+      {
+        src: "/images/products/franciacorta-brut-territorio.jpg",
+        alt: "Bottiglia di Franciacorta Brut Cascina Rezzani tra pietre naturali e vigneto"
+      }
+    ],
     callToAction: "Richiedi informazioni"
   },
   {
@@ -132,6 +123,16 @@ export const products: Product[] = [
     ],
     image: "/images/products/franciacorta-saten-render.jpg",
     imageAlt: "Bottiglia elegante di Franciacorta Satèn",
+    gallery: [
+      {
+        src: "/images/products/franciacorta-saten-territorio.jpg",
+        alt: "Bottiglia di Franciacorta Satèn Cascina Rezzani sul muretto tra vigneto e campagna"
+      },
+      {
+        src: "/images/products/franciacorta-saten-vigneto.jpg",
+        alt: "Bottiglia di Franciacorta Satèn Cascina Rezzani tra i filari"
+      }
+    ],
     callToAction: "Richiedi informazioni"
   }
 ];
