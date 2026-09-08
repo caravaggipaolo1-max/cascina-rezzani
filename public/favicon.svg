@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Cascina Rezzani">
-  <rect width="64" height="64" rx="12" fill="#173d2f"/>
-  <path d="M15 43h34L32 17 15 43Z" fill="#f4ecdc"/>
-  <path d="M24 43V31h16v12" fill="#8b1e3f"/>
-  <path d="M20 43h24" stroke="#c5a35d" stroke-width="3" stroke-linecap="round"/>
-</svg>
