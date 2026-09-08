@@ -13,7 +13,7 @@ type ProductPageProps = {
 };
 
 export function generateStaticParams() {
-  return products.map((product) => ({
+  return products.filter((product) => !product.comingSoon).map((product) => ({
     slug: product.slug
   }));
 }
@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: ProductPageProps) {
   const { slug } = await params;
   const product = getProductBySlug(slug);
 
-  if (!product) {
+  if (!product || product.comingSoon) {
     return {
       title: "Prodotto non trovato | Cascina Rezzani"
     };
@@ -38,11 +38,10 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
   const { slug } = await params;
   const product = getProductBySlug(slug);
 
-  if (!product) {
+  if (!product || product.comingSoon) {
     notFound();
   }
 
-  const isCremeDeCassis = product.slug === "creme-de-cassis";
   const productImages = product.gallery
     ? [{ src: product.image, alt: product.imageAlt }, ...product.gallery]
     : null;
@@ -67,14 +66,10 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
               </div>
             )}
             <div className="product-detail-copy">
-              {isCremeDeCassis ? null : (
-                <>
-                  <Link className="back-link" href="/#prodotti">
-                    Torna ai prodotti
-                  </Link>
-                  <p className="eyebrow">{product.category}</p>
-                </>
-              )}
+              <Link className="back-link" href="/#prodotti">
+                Torna ai prodotti
+              </Link>
+              <p className="eyebrow">{product.category}</p>
               <h1>{product.name}</h1>
               <p className="product-lead">{product.shortDescription}</p>
               <div className="product-detail-actions">

@@ -2,6 +2,7 @@ export type Product = {
   name: string;
   slug: string;
   category: string;
+  comingSoon?: boolean;
   shortDescription: string;
   detailDescription: string[];
   formats: string[];
@@ -30,26 +31,21 @@ export const products: Product[] = [
   {
     name: "Crème de Cassis",
     slug: "creme-de-cassis",
-    category: "Liquore al ribes nero",
-    shortDescription:
-      "Liquore al ribes nero dal gusto intenso, ricco e fruttato. Una specialità versatile, ideale da degustare fresca, con ghiaccio, con vino bianco o in abbinamento alle bollicine.",
-    detailDescription: [
-      "La Crème de Cassis nasce per valorizzare il carattere profondo del ribes nero. Il frutto regala un colore scuro e brillante, un profumo avvolgente e un gusto pieno, morbido e persistente.",
-      "La lavorazione si ispira alla tradizione dei liquori al ribes: le bacche vengono lasciate macerare per estrarre aromi, colore e struttura, ottenendo un'infusione intensa che viene poi addolcita per raggiungere equilibrio e piacevolezza.",
-      "Si può gustare liscia, fresca o con ghiaccio. È ottima anche con vino bianco secco, con spumante o Franciacorta, e può diventare un ingrediente elegante per cocktail, dessert, gelati e preparazioni di pasticceria."
-    ],
-    formats: ["70 cl", "10 cl"],
-    bottleStyle: "Bottiglia stile Armagnac",
-    alcohol: "20% vol. - dato provvisorio",
-    servingTemperature: "Da servire fresco",
-    retailPrice: "Da definire",
-    availability: "Disponibile su richiesta",
+    category: "In arrivo",
+    comingSoon: true,
+    shortDescription: "Una nuova specialità Cascina Rezzani è in arrivo.",
+    detailDescription: [],
+    formats: [],
+    alcohol: "",
+    servingTemperature: "",
+    retailPrice: "",
+    availability: "Prossimamente",
     origin: "Cascina Rezzani",
-    pairings: ["Vino bianco secco", "Franciacorta", "Gelato alla crema", "Dessert"],
-    notes: ["Ribes nero", "Frutto maturo", "Colore intenso", "Profilo aromatico ricco"],
+    pairings: [],
+    notes: [],
     image: "/images/products/creme-de-cassis-render.jpg",
-    imageAlt: "Bottiglia elegante di liquore al ribes nero",
-    callToAction: "Richiedi informazioni"
+    imageAlt: "Render provvisorio di Crème de Cassis Cascina Rezzani",
+    callToAction: "Prossimamente"
   },
   {
     name: "Franciacorta Brut",
@@ -62,11 +58,11 @@ export const products: Product[] = [
       "L'affinamento in acciaio e la successiva permanenza in bottiglia sui lieviti valorizzano le note minerali e sapide, mantenendo un profilo asciutto, fine e piacevole alla beva.",
       "Al calice si presenta giallo paglierino con riflessi dorati, con perlage fine e persistente. Il profumo richiama note floreali intense, mentre il sorso è elegante e fresco, con sentori di pesca e una piacevole chiusura minerale."
     ],
-    formats: ["75 cl", "1,5 L"],
+    formats: ["75 cl", "1,5 L (su richiesta)"],
     alcohol: "12,5% vol.",
     servingTemperature: "6-8 °C",
-    retailPrice: "25€",
-    availability: "Disponibile su richiesta",
+    retailPrice: "25€ (75 cl)",
+    availability: "1,5 L disponibile su richiesta",
     origin: "Franciacorta",
     pairings: ["Aperitivi", "Antipasti di mare", "Verdure", "Piatti delicati"],
     notes: ["100% Chardonnay", "Fresco ed equilibrato", "Mineralità", "Perlage fine e persistente"],
@@ -104,11 +100,11 @@ export const products: Product[] = [
       "È un blanc de blancs dalla personalità fine e armoniosa, in cui mineralità e sapidità si fondono con la morbida eleganza del vitigno. L'affinamento in acciaio e la lunga permanenza sui lieviti contribuiscono a costruire complessità, equilibrio e persistenza.",
       "Al calice si presenta giallo paglierino con riflessi dorati. Il perlage è estremamente fine e cremoso, con bollicine setose e persistenti. Il profumo richiama fiori bianchi, nocciola tostata, miele d'acacia e un tocco di agrumi canditi."
     ],
-    formats: ["75 cl", "1,5 L"],
+    formats: ["75 cl", "1,5 L (su richiesta)"],
     alcohol: "12,0% vol.",
     servingTemperature: "6-8 °C",
-    retailPrice: "28€",
-    availability: "Disponibile su richiesta",
+    retailPrice: "28€ (75 cl)",
+    availability: "1,5 L disponibile su richiesta",
     origin: "Franciacorta",
     pairings: ["Antipasti di pesce", "Risotti delicati", "Crostacei", "Formaggi freschi"],
     notes: ["Blanc de blancs", "Elegante", "Bollicina setosa", "Struttura vellutata"],

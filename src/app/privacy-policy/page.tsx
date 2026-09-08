@@ -19,6 +19,7 @@ export default function PrivacyPolicyPage() {
             effettuato attraverso questo sito web, ai sensi del Regolamento
             (UE) 2016/679.
           </p>
+          <p>Ultimo aggiornamento: 8 settembre 2026.</p>
           <h2>Titolare del trattamento</h2>
           <p>
             Il titolare del trattamento è Cascina Rezzani S.R.L. - Società
@@ -29,9 +30,10 @@ export default function PrivacyPolicyPage() {
           <h2>Dati trattati</h2>
           <p>
             Il sito ha finalità informative. I dati eventualmente comunicati
-            tramite e-mail, PEC o modulo di contatto possono includere nome,
-            recapiti e contenuto del messaggio. Il modulo attualmente presente
-            sul sito non è collegato a un sistema di invio esterno.
+            tramite e-mail o PEC possono includere nome, recapiti e contenuto
+            del messaggio. Il sito contiene inoltre un collegamento esterno al
+            profilo Instagram: cliccandolo, l'utente accede alla piattaforma,
+            che tratta i dati secondo la propria informativa privacy.
           </p>
           <h2>Finalità e base giuridica</h2>
           <p>
