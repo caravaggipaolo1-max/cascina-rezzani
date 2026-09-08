@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import type { Product } from "@/data/products";
@@ -9,14 +7,6 @@ type ProductCardProps = {
 };
 
 export function ProductCard({ product }: ProductCardProps) {
-  const selectProduct = () => {
-    window.dispatchEvent(
-      new CustomEvent("cascina:product-interest", {
-        detail: product.name
-      })
-    );
-  };
-
   return (
     <article className="product-card">
       <Link className="product-image" href={`/prodotti/${product.slug}`}>
@@ -41,7 +31,7 @@ export function ProductCard({ product }: ProductCardProps) {
           <Link className="text-button" href={`/prodotti/${product.slug}`}>
             Scheda prodotto
           </Link>
-          <a className="text-button" href="#contatti" onClick={selectProduct}>
+          <a className="text-button" href="#contatti">
             {product.callToAction}
           </a>
         </div>
